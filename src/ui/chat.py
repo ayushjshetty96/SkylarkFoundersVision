@@ -9,11 +9,13 @@ from src.agent.runner import AgentRunner, GroqAgentError
 from src.ui.components import render_tool_trace
 
 SUGGESTED_QUERIES = [
-    "What is our revenue?",
-    "Which customers need attention?",
-    "What is our biggest pipeline opportunity?",
-    "Who owes us the most?",
     "What should I focus on this week?",
+    "Who owes us the most?",
+    "Show pipeline risks",
+    "Which sector is strongest?",
+    "How is Energy performing?",
+    "Which customers need attention?",
+    "Compare pipeline and operations",
 ]
 
 
@@ -23,8 +25,8 @@ def render_chat(
     debug_mode: bool = False,
     agent_factory=None,
 ) -> None:
-    st.markdown('<div class="sk-section">Ask Skylark</div>', unsafe_allow_html=True)
-    st.caption("Ask questions about revenue, customers, pipeline, collections and operations.")
+    st.markdown('<div class="fi-section">ASK SKYLARK</div>', unsafe_allow_html=True)
+    st.caption("Answer · Evidence · Insight · Action")
 
     if "messages" not in st.session_state:
         st.session_state.messages = []

@@ -14,10 +14,18 @@
     "min_collected_for_healthy": 100000
   },
   "health_score_weights": {
-    "revenue": 0.25,
-    "pipeline": 0.25,
-    "collections": 0.25,
-    "operations": 0.15,
-    "data_quality": 0.10
+    "revenue": 0.20,
+    "pipeline": 0.20,
+    "collections": 0.20,
+    "operations": 0.20,
+    "customer_health": 0.20
+  },
+  "pipeline_radar": {
+    "high_value_inr": 10000000,
+    "quick_win_inr": 2000000
+  },
+  "customer_tiers": {
+    "strategic_collected_inr": 10000000,
+    "growing_pipeline_inr": 5000000
   }
 }

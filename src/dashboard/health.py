@@ -19,6 +19,16 @@ def _clamp_score(value: float) -> float:
     return max(0.0, min(100.0, value))
 
 
+def _customer_health_score(metrics: Any) -> float:
+    rows = metrics.customers.get("rows") or []
+    if not rows:
+        return 70.0
+    at_risk = sum(1 for r in rows if classify_customer_health(r) == "AT RISK")
+    watch = sum(1 for r in rows if classify_customer_health(r) == "WATCH")
+    penalty = (at_risk * 15 + watch * 5) / len(rows)
+    return _clamp_score(100 - penalty)
+
+
 def calculate_health_score(metrics: Any) -> dict[str, Any]:
     """Composite health score — live snapshot only, no fake trends."""
     rules = load_dashboard_rules()
@@ -49,21 +59,25 @@ def calculate_health_score(metrics: Any) -> dict[str, Any]:
     ops_penalty = (stuck * 5 + not_started * 0.5) / wo_total * 100
     operations_health = _clamp_score(100 - ops_penalty)
 
+    customer_health = _customer_health_score(metrics)
+
     missing = dq.get("missing_deal_values") or 0
     deal_count = dq.get("deal_count") or 1
     dq_health = _clamp_score(100 - (missing / deal_count) * 100)
 
-    w_rev = weights.get("revenue", 0.25)
-    w_pipe = weights.get("pipeline", 0.25)
-    w_coll = weights.get("collections", 0.25)
-    w_ops = weights.get("operations", 0.15)
-    w_dq = weights.get("data_quality", 0.10)
+    w_rev = weights.get("revenue", 0.20)
+    w_pipe = weights.get("pipeline", 0.20)
+    w_coll = weights.get("collections", 0.20)
+    w_ops = weights.get("operations", 0.20)
+    w_cust = weights.get("customer_health", 0.20)
+    w_dq = weights.get("data_quality", 0.0)
 
     overall = (
         revenue_health * w_rev
         + pipeline_health * w_pipe
         + collections_health * w_coll
         + operations_health * w_ops
+        + customer_health * w_cust
         + dq_health * w_dq
     )
 
@@ -74,9 +88,9 @@ def calculate_health_score(metrics: Any) -> dict[str, Any]:
             "pipeline_health": round(pipeline_health, 1),
             "collections_health": round(collections_health, 1),
             "operations_health": round(operations_health, 1),
+            "customer_health": round(customer_health, 1),
             "data_quality_health": round(dq_health, 1),
         },
-        "note": "Live snapshot — historical trend unavailable",
     }
 
 

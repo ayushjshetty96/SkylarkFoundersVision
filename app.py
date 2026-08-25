@@ -1,4 +1,4 @@
-"""Skylark Founder's Dashboard."""
+"""Skylark Founder's Dashboard — Founder Intelligence Command Center."""
 
 from __future__ import annotations
 
@@ -28,7 +28,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 st.set_page_config(
-    page_title="Skylark Founder's Dashboard",
+    page_title="Skylark // Founder Intelligence",
     page_icon="◆",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -41,7 +41,6 @@ def get_data_service():
 
 
 def create_agent() -> AgentRunner | None:
-    """Lazy AI init — dashboard does not require Groq."""
     try:
         return AgentRunner(data_service=get_data_service(), settings=get_settings())
     except Exception as exc:
@@ -66,6 +65,9 @@ def main() -> None:
 
     cache_version = st.session_state.get("cache_version", 0)
 
+    def _chat():
+        render_chat(agent_factory=create_agent, debug_mode=debug_mode)
+
     data_ok = True
     load_ms = 0.0
     try:
@@ -77,23 +79,22 @@ def main() -> None:
         st.warning("Some live data is temporarily unavailable. Please refresh.")
         if debug_mode:
             st.exception(Exception("Data load failed"))
-        st.markdown("---")
-        render_chat(agent_factory=create_agent, debug_mode=debug_mode)
+        _chat()
         return
 
     if render_skylark_dashboard(
-        data, metrics,
+        data,
+        metrics,
         data_ok=data_ok,
         debug_mode=debug_mode,
         load_ms=load_ms if debug_mode else None,
+        data_service=get_data_service(),
+        chat_renderer=_chat,
     ):
         get_data_service().invalidate_cache()
         st.cache_data.clear()
         st.session_state["cache_version"] = cache_version + 1
         st.rerun()
-
-    st.markdown("---")
-    render_chat(agent_factory=create_agent, debug_mode=debug_mode)
 
 
 if __name__ == "__main__":
