@@ -1,0 +1,23 @@
+{
+  "alerts": {
+    "priority_ar_inr": 1000000,
+    "stale_open_deals": 10,
+    "not_started_work_orders": 5,
+    "stuck_work_orders": 1,
+    "missing_deal_values": 20,
+    "deal_only_companies": 50,
+    "sector_mismatch_companies": 1
+  },
+  "customer_health": {
+    "high_receivables_ratio": 0.5,
+    "watch_receivables_ratio": 0.25,
+    "min_collected_for_healthy": 100000
+  },
+  "health_score_weights": {
+    "revenue": 0.25,
+    "pipeline": 0.25,
+    "collections": 0.25,
+    "operations": 0.15,
+    "data_quality": 0.10
+  }
+}

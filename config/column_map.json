@@ -1,0 +1,407 @@
+{
+  "work_orders": {
+    "board_id": "5030844872",
+    "board_name": "BI Agent — Work Orders",
+    "items_count": 180,
+    "fetched_items": 180,
+    "columns": {
+      "deal_name_masked": "name",
+      "customer_name_code": "text_mm6jpa7v",
+      "serial_number": "text_mm6je3xn",
+      "nature_of_work": "text_mm6jcrdy",
+      "last_executed_month": "text_mm6j3azr",
+      "execution_status": "text_mm6j89d8",
+      "data_delivery_date": "text_mm6j2ppt",
+      "po_date": "text_mm6j5ajk",
+      "document_type": "text_mm6j272f",
+      "start_date": "text_mm6jmn5g",
+      "end_date": "text_mm6jpc37",
+      "owner_code": "text_mm6jx92j",
+      "sector": "text_mm6jqdca",
+      "type_of_work": "text_mm6jq5q3",
+      "platform_attachment": "text_mm6j623j",
+      "last_invoice_date": "text_mm6je4mx",
+      "latest_invoice_no": "text_mm6j63d1",
+      "contract_value_excl_gst": "text_mm6jberp",
+      "contract_value_incl_gst": "text_mm6j133a",
+      "billed_value_excl_gst": "text_mm6jg490",
+      "billed_value_incl_gst": "text_mm6jr8xs",
+      "collected_amount_incl_gst": "text_mm6jj07h",
+      "amount_to_bill_excl_gst": "text_mm6j1639",
+      "amount_to_bill_incl_gst": "text_mm6j4zka",
+      "amount_receivable": "text_mm6jvpdx",
+      "ar_priority": "text_mm6j5mjs",
+      "quantity_ops": "text_mm6jxrv2",
+      "quantity_po": "text_mm6j362w",
+      "quantity_billed": "text_mm6j506p",
+      "quantity_balance": "text_mm6jebf",
+      "invoice_status": "text_mm6j8cyc",
+      "expected_billing_month": "text_mm6jhxdn",
+      "actual_billing_month": "text_mm6jtq33",
+      "wo_status_billed": "text_mm6j9add",
+      "collection_status": "text_mm6jpsex",
+      "collection_date": "text_mm6ja9fw",
+      "billing_status": "text_mm6jqvj0"
+    },
+    "column_details": [
+      {
+        "id": "name",
+        "title": "Name",
+        "type": "name",
+        "settings_str": "{}"
+      },
+      {
+        "id": "person",
+        "title": "Person",
+        "type": "people",
+        "settings_str": "{}"
+      },
+      {
+        "id": "status",
+        "title": "Status",
+        "type": "status",
+        "settings_str": "{\"done_colors\":[1],\"labels\":{\"0\":\"Working on it\",\"1\":\"Done\",\"2\":\"Stuck\"},\"labels_positions_v2\":{\"0\":0,\"1\":2,\"2\":1,\"5\":3},\"labels_colors\":{\"0\":{\"color\":\"#fdab3d\",\"border\":\"#e99729\",\"var_name\":\"orange\"},\"1\":{\"color\":\"#00c875\",\"border\":\"#00b461\",\"var_name\":\"green-shadow\"},\"2\":{\"color\":\"#df2f4a\",\"border\":\"#ce3048\",\"var_name\":\"red-shadow\"}}}"
+      },
+      {
+        "id": "date4",
+        "title": "Date",
+        "type": "date",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6jpa7v",
+        "title": "Customer Name Code",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6je3xn",
+        "title": "Serial #",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6jcrdy",
+        "title": "Nature of Work",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6j3azr",
+        "title": "Last executed month of recurring project",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6j89d8",
+        "title": "Execution Status",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6j2ppt",
+        "title": "Data Delivery Date",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6j5ajk",
+        "title": "Date of PO/LOI",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6j272f",
+        "title": "Document Type",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6jmn5g",
+        "title": "Probable Start Date",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6jpc37",
+        "title": "Probable End Date",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6jx92j",
+        "title": "BD/KAM Personnel code",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6jqdca",
+        "title": "Sector",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6jq5q3",
+        "title": "Type of Work",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6j623j",
+        "title": "Is any Skylark software platform part of the client deliverables in this deal?",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6je4mx",
+        "title": "Last invoice date",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6j63d1",
+        "title": "latest invoice no.",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6jberp",
+        "title": "Amount in Rupees (Excl of GST) (Masked)",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6j133a",
+        "title": "Amount in Rupees (Incl of GST) (Masked)",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6jg490",
+        "title": "Billed Value in Rupees (Excl of GST.) (Masked)",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6jr8xs",
+        "title": "Billed Value in Rupees (Incl of GST.) (Masked)",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6jj07h",
+        "title": "Collected Amount in Rupees (Incl of GST.) (Masked)",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6j1639",
+        "title": "Amount to be billed in Rs. (Exl. of GST) (Masked)",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6j4zka",
+        "title": "Amount to be billed in Rs. (Incl. of GST) (Masked)",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6jvpdx",
+        "title": "Amount Receivable (Masked)",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6j5mjs",
+        "title": "AR Priority account",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6jxrv2",
+        "title": "Quantity by Ops",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6j362w",
+        "title": "Quantities as per PO",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6j506p",
+        "title": "Quantity billed (till date)",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6jebf",
+        "title": "Balance in quantity",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6j8cyc",
+        "title": "Invoice Status",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6jhxdn",
+        "title": "Expected Billing Month",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6jtq33",
+        "title": "Actual Billing Month",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6j3gz4",
+        "title": "Actual Collection Month",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6j9add",
+        "title": "WO Status (billed)",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6jpsex",
+        "title": "Collection status",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6ja9fw",
+        "title": "Collection Date",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6jqvj0",
+        "title": "Billing Status",
+        "type": "text",
+        "settings_str": "{}"
+      }
+    ]
+  },
+  "deals": {
+    "board_id": "5030845072",
+    "board_name": "BI Agent — Deals",
+    "items_count": 349,
+    "fetched_items": 349,
+    "columns": {
+      "deal_name": "name",
+      "owner_code": "text_mm6je531",
+      "client_code": "text_mm6j7rdq",
+      "deal_status": "text_mm6j1yp7",
+      "close_date": "text_mm6jpxgy",
+      "closure_probability": "text_mm6jcc9m",
+      "deal_value": "text_mm6j5vwp",
+      "tentative_close_date": "text_mm6j1644",
+      "deal_stage": "text_mm6jbayr",
+      "product_type": "text_mm6jttep",
+      "sector": "text_mm6j73vj",
+      "created_date": "text_mm6jdg3m"
+    },
+    "column_details": [
+      {
+        "id": "name",
+        "title": "Name",
+        "type": "name",
+        "settings_str": "{}"
+      },
+      {
+        "id": "person",
+        "title": "Person",
+        "type": "people",
+        "settings_str": "{}"
+      },
+      {
+        "id": "status",
+        "title": "Status",
+        "type": "status",
+        "settings_str": "{\"done_colors\":[1],\"labels\":{\"0\":\"Working on it\",\"1\":\"Done\",\"2\":\"Stuck\"},\"labels_positions_v2\":{\"0\":0,\"1\":2,\"2\":1,\"5\":3},\"labels_colors\":{\"0\":{\"color\":\"#fdab3d\",\"border\":\"#e99729\",\"var_name\":\"orange\"},\"1\":{\"color\":\"#00c875\",\"border\":\"#00b461\",\"var_name\":\"green-shadow\"},\"2\":{\"color\":\"#df2f4a\",\"border\":\"#ce3048\",\"var_name\":\"red-shadow\"}}}"
+      },
+      {
+        "id": "date4",
+        "title": "Date",
+        "type": "date",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6je531",
+        "title": "Owner code",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6j7rdq",
+        "title": "Client Code",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6j1yp7",
+        "title": "Deal Status",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6jpxgy",
+        "title": "Close Date (A)",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6jcc9m",
+        "title": "Closure Probability",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6j5vwp",
+        "title": "Masked Deal value",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6j1644",
+        "title": "Tentative Close Date",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6jbayr",
+        "title": "Deal Stage",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6jttep",
+        "title": "Product deal",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6j73vj",
+        "title": "Sector/service",
+        "type": "text",
+        "settings_str": "{}"
+      },
+      {
+        "id": "text_mm6jdg3m",
+        "title": "Created Date",
+        "type": "text",
+        "settings_str": "{}"
+      }
+    ]
+  }
+}
